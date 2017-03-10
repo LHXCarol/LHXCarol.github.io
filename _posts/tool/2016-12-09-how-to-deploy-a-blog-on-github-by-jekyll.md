@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Github上搭建自己的jekyll博客
-category: 工具
+tag: 工具
 keyword: 'Jekyll, Github'
 description: null
 published: true

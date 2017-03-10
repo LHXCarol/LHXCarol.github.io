@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>在Github上搭建自己的jekyll博客</title>
+  <meta name="description" content="  本文主要是根据yansu的博客及github上的源码进行建立的,为了记录搭建的过程,特此进行记录.">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在Github上搭建自己的jekyll博客">
+  <meta name="twitter:description" content="  本文主要是根据yansu的博客及github上的源码进行建立的,为了记录搭建的过程,特此进行记录.">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在Github上搭建自己的jekyll博客">
+  <meta property="og:description" content="  本文主要是根据yansu的博客及github上的源码进行建立的,为了记录搭建的过程,特此进行记录.">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://lhxcarol.github.io/2016/12/how-to-deploy-a-blog-on-github-by-jekyll/">
+  <link rel="alternate" type="application/rss+xml" title="Carol Li" href="http://lhxcarol.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>  
+
+<!-- 百度统计 -->
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 Carol Li 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                                Carol's Blog
+                            
+                        </h2>
+                        <p>
+                           
+                                深度学习 / 机器学习
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Carol Li" class="blog-button">Carol Li</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人站</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">欢迎来到我的博客~</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">在Github上搭建自己的jekyll博客</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2016-12-09 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2016-12-09</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <blockquote>
+  <p>本文主要是根据yansu的<a href="http://yansu.org/">博客</a>及github上的<a href="https://github.com/suyan/suyan.github.io">源码</a>进行建立的,为了记录搭建的过程,特此进行记录.</p>
+</blockquote>
+
+<blockquote>
+  <p>本文主要记录了我在搭建过程中的修改.</p>
+</blockquote>
+
+<h2 id="section">创建一个库</h2>
+<p>将该<a href="https://github.com/suyan/suyan.github.io">库</a>fork到自己的github,并修改为<code class="highlighter-rouge">username.github.io</code>.</p>
+
+<h2 id="section-1">创建本地目录</h2>
+<p>将库clone到本地.</p>
+
+<h2 id="section-2">域名配置</h2>
+<p>删除<code class="highlighter-rouge">CNAME</code>文件,从而使用默认域名.有自己域名的,可以直接在该文件中修改为自己的域名.这里,我使用了默认的域名.</p>
+
+<h2 id="section-3">配置文件</h2>
+<p>修改<code class="highlighter-rouge">_config.yml</code>文件,将里面的变量全部修改为自己的.</p>
+
+<p>这里主要讲一下blog中头像的设置.首先将自己的头像上传到自己的github中,然后点击图像打开,复制浏览器中url到<code class="highlighter-rouge">_config.yml</code>的avatar变量中.
+下面设置ico图标,可以在<a href="http://www.ico.la/">网站</a>中,上传自己的头像在线生成;然后选择合适尺寸的图标下载到本地;最后,按照上述方法,获取url并赋值给<code class="highlighter-rouge">favicon</code>变量.</p>
+
+<h2 id="section-4">博客文件</h2>
+<p><code class="highlighter-rouge">_posts</code>目录保存了所有博客,会被jekyll处理成静态的html文件.</p>
+
+<p>删除该目录下的所有文件,并按照自己的喜好建立新的文件夹,可以方便管理自己的博客.</p>
+
+<blockquote>
+  <p>另外,在<code class="highlighter-rouge">_posts</code>下符合<code class="highlighter-rouge">YYYY-MM-DD-xxxxxx.md</code>的文件,都会被jekyll认定为博客内容.因此写博客时要注意保存的文件名.</p>
+</blockquote>
+
+
+
+  </section>
+</article>
+
+<section>
+       <ul class="pager">
+        
+        
+        <li class="next">
+            <a href="/2016/12/how-to-use-Markdown/" data-toggle="tooltip" data-placement="top" title="Markdown的使用说明">下一篇：  <span>Markdown的使用说明</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2016/12/how-to-deploy-a-blog-on-github-by-jekyll/" data-title="在Github上搭建自己的jekyll博客" data-url="http://lhxcarol.github.io/2016/12/how-to-deploy-a-blog-on-github-by-jekyll/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"Carol"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+
+          
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/lhxcarol" title="@lhxcarol 的 Github" target="_blank">
+              <i class='social fa fa-github fa-2x'></i>
+              <span class="label">Github</span>
+            </a>
+          </li>
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:lihongxa170@gmail.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; Carol Li 2017 Theme by <a href="http://baixin.io/">leopardpan</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+
+</html>

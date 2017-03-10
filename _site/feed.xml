@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carol Li</title>
+    <description>欢迎来到我的博客~</description>
+    <link>http://lhxcarol.github.io/</link>
+    <atom:link href="http://lhxcarol.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 10 Mar 2017 10:06:41 +0800</pubDate>
+    <lastBuildDate>Fri, 10 Mar 2017 10:06:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>利用Anaconda安装OpenCV,并在PyCharm中设置</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;最近需要将Opencv2转换为Opencv3,之前安装主要是通过源代码安装,但是安装实在是太慢了…另外,因为我已经用Anaconda配置好了环境,所以想基于Anaconda的环境安装Opencv3.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;下面,主要记录我安装的过程,并在PyCharm中进行配置.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;anaconda&quot;&gt;安装Anaconda&lt;/h2&gt;
+
+&lt;h3 id=&quot;anaconda-1&quot;&gt;1.下载Anaconda&lt;/h3&gt;
+
+&lt;p&gt;按照电脑的配置和python的版本,下载&lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;anaconda&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;anaconda-2&quot;&gt;2.安装Anaconda&lt;/h3&gt;
+
+&lt;p&gt;Python 3.5 version&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bash Anaconda3-4.2.0-Linux-x86_64.sh 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Python 2.7 version&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bash Anaconda2-4.2.0-Linux-x86_64.sh 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;anaconda-3&quot;&gt;Anaconda的使用&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1.搜索软件包&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda search package-name
+
+anaconda search -t conda package-name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2.安装软件包&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda install package-name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;安装指定软件包:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda install package-name=x.x
+
+conda install -c 发布者 package-name=x.x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3.查看已安装的软件包&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;4.修改镜像源&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda config --add channels &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39;
+
+conda config --set show_channel_urls yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;5.删除镜像源&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano ~/.condarc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;opencv&quot;&gt;安装OpenCV&lt;/h2&gt;
+
+&lt;p&gt;选择下列方法之一安装:&lt;/p&gt;
+
+&lt;h3 id=&quot;anacondaopencv&quot;&gt;1.通过Anaconda安装OpenCV&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;anaconda search -t conda opencv
+
+conda install -c 发布者 opencv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;2.通过源码安装&lt;/h3&gt;
+
+&lt;p&gt;可以安装该&lt;a href=&quot;http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/&quot;&gt;教程&lt;/a&gt;或该&lt;a href=&quot;https://github.com/jayrambhia/Install-OpenCV&quot;&gt;教程&lt;/a&gt;进行源码安装.&lt;/p&gt;
+
+&lt;p&gt;注: 由于我的python环境是通过anaconda配置的,在使用PyCharm时可能会出现不能识别已安装的opencv(我是使用anaconda安装的opencv).&lt;/p&gt;
+
+&lt;p&gt;此时,需要分别找到anaconda安装python和opencv的路径,并将cv.py和cv2.so链接到python的路径中.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /path/to/anaconda2/lib/python2.7/site-packages/
+
+ln -s /path/to/opencv/cv2.so cv2.so
+
+ln -s /path/to/opencv/cv.py cv.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果找不到cv.py,可以创建cv.py文件,并添加:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from cv2.cv import *
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 23 Dec 2016 00:00:00 +0800</pubDate>
+        <link>http://lhxcarol.github.io/2016/12/how-to-use-opencv-of-anaconda-in-pycharm/</link>
+        <guid isPermaLink="true">http://lhxcarol.github.io/2016/12/how-to-use-opencv-of-anaconda-in-pycharm/</guid>
+        
+        <category>工具</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown的使用说明</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;之前一直在使用github,每次新建项目时总会建立一个&lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt;文件,用以说明该项目的功能和接口等,但是从未对md进行深入了解过.
+今天,在编写blog时,想了解一下编写README.md的格式,发现其是使用Markdown语言编写的.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这里,主要是记录一些以后可能用到的方法.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 09 Dec 2016 00:00:00 +0800</pubDate>
+        <link>http://lhxcarol.github.io/2016/12/how-to-use-Markdown/</link>
+        <guid isPermaLink="true">http://lhxcarol.github.io/2016/12/how-to-use-Markdown/</guid>
+        
+        <category>工具</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>在Github上搭建自己的jekyll博客</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;本文主要是根据yansu的&lt;a href=&quot;http://yansu.org/&quot;&gt;博客&lt;/a&gt;及github上的&lt;a href=&quot;https://github.com/suyan/suyan.github.io&quot;&gt;源码&lt;/a&gt;进行建立的,为了记录搭建的过程,特此进行记录.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;本文主要记录了我在搭建过程中的修改.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;创建一个库&lt;/h2&gt;
+&lt;p&gt;将该&lt;a href=&quot;https://github.com/suyan/suyan.github.io&quot;&gt;库&lt;/a&gt;fork到自己的github,并修改为&lt;code class=&quot;highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;创建本地目录&lt;/h2&gt;
+&lt;p&gt;将库clone到本地.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;域名配置&lt;/h2&gt;
+&lt;p&gt;删除&lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt;文件,从而使用默认域名.有自己域名的,可以直接在该文件中修改为自己的域名.这里,我使用了默认的域名.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;配置文件&lt;/h2&gt;
+&lt;p&gt;修改&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;文件,将里面的变量全部修改为自己的.&lt;/p&gt;
+
+&lt;p&gt;这里主要讲一下blog中头像的设置.首先将自己的头像上传到自己的github中,然后点击图像打开,复制浏览器中url到&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;的avatar变量中.
+下面设置ico图标,可以在&lt;a href=&quot;http://www.ico.la/&quot;&gt;网站&lt;/a&gt;中,上传自己的头像在线生成;然后选择合适尺寸的图标下载到本地;最后,按照上述方法,获取url并赋值给&lt;code class=&quot;highlighter-rouge&quot;&gt;favicon&lt;/code&gt;变量.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;博客文件&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;目录保存了所有博客,会被jekyll处理成静态的html文件.&lt;/p&gt;
+
+&lt;p&gt;删除该目录下的所有文件,并按照自己的喜好建立新的文件夹,可以方便管理自己的博客.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;另外,在&lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;下符合&lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-xxxxxx.md&lt;/code&gt;的文件,都会被jekyll认定为博客内容.因此写博客时要注意保存的文件名.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Fri, 09 Dec 2016 00:00:00 +0800</pubDate>
+        <link>http://lhxcarol.github.io/2016/12/how-to-deploy-a-blog-on-github-by-jekyll/</link>
+        <guid isPermaLink="true">http://lhxcarol.github.io/2016/12/how-to-deploy-a-blog-on-github-by-jekyll/</guid>
+        
+        <category>工具</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

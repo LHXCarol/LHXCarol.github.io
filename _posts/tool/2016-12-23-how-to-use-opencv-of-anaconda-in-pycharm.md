@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用Anaconda安装OpenCV,并在PyCharm中设置
-category: 工具
+tag: 工具
 keyword: Markdown
 description:
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown的使用说明
-category: 工具
+tag: 工具
 keyword: Markdown
 description:
 ---
